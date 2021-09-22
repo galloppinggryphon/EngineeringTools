@@ -1,0 +1,24 @@
+{
+    "resource_pack_name": "engtools",
+    "texture_name": "atlas.items",
+    "texture_data": {
+      "build": {
+        "textures": "textures/items/build"
+        //"sound": "stone"
+      },
+      "destroy": {
+        "textures": "textures/items/destroy"
+        //"sound": "stone"
+      },
+      "measure": {
+        "textures": "textures/items/measure"
+      },
+      "query": {
+        "textures": "textures/items/query"
+      },
+      "teleport": {
+        "textures": "textures/items/teleport"
+        //"sound": "stone"
+      }
+    }
+  }

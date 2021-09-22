@@ -1,0 +1,23 @@
+{
+  // "extends": ["plugin:json/recommended-with-comments" ,"eslint:recommended"],
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "no-console": "off"
+  }
+  // "overrides": [
+  //   {
+  //     "files": ["**/*.json", ".eslintrc"],
+  //     "rules": {
+  //       "quotes": ["error", "single"],
+  //       "comma-dangle": ["error", "never"]
+  //     }
+  //   }
+  // ]
+}

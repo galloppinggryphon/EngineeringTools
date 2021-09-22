@@ -1,0 +1,23 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Engineering Tools 2.0",
+    "description": "Quickly create large structures or carve our large areas. Also requires behaviour pack.",
+    "uuid": "2f4c6d03-af1b-43b3-89bd-61747c74f6e4",
+    "version": [2, 0, 0],
+    "min_engine_version": [1, 17, 11]
+  },
+  "metadata": {
+    "authors": "Bjornar Egede-Nissen",
+    "license": "GPL-v3. See license.txt",
+    "url": "https://github.com/galloppinggryphon/EngineeringTools"
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "f15ca849-21e9-449c-b349-7656b3f63186",
+      "version": [0, 0, 1]
+    }
+  ],
+  "capabilities": ["experimental_custom_ui"]
+}

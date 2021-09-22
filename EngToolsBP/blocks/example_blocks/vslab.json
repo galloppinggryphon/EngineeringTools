@@ -1,0 +1,72 @@
+{
+  // This block is used to test if the fill command can deal with custom block states
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "engtools:vslab",
+      "register_to_creative_menu": true,
+      "properties": {
+        "block:rotation": [2, 3, 4, 5, 6]
+      }
+    },
+    "components": {
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "orange_glazed_terracotta"
+        }
+      },
+      "minecraft:entity_collision": {
+        "origin": [-8, 0, -8],
+        "size": [16, 16, 8]
+      },
+      "minecraft:pick_collision": {
+        "origin": [-8, 0, -8],
+        "size": [16, 16, 8]
+      },
+      "minecraft:geometry": "geometry.slab_vertical",
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "place_block"
+      }
+    },
+
+    "events": {
+      "place_block": {
+        "set_block_property": {
+          "block:rotation": "(query.cardinal_facing_2d)"
+        }
+      }
+    },
+
+    "permutations": [
+      {
+        //North
+        "condition": "query.block_property('block:rotation') == 2",
+        "components": {
+          "minecraft:rotation": [0, 0, 0]
+        }
+      },
+      {
+        //South
+        "condition": "query.block_property('block:rotation') == 3",
+        "components": {
+          "minecraft:rotation": [0, 180, 0]
+        }
+      },
+      {
+        //West
+        "condition": "query.block_property('block:rotation') == 4",
+        "components": {
+          "minecraft:rotation": [0, 90, 0]
+        }
+      },
+      {
+        //East
+        "condition": "query.block_property('block:rotation') == 5",
+        "components": {
+          "minecraft:rotation": [0, 270, 0]
+        }
+      }
+    ]
+  }
+}

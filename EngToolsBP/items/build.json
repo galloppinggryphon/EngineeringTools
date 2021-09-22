@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "engtools:build",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:display_name": { "value": "Building Tool" },
+      "minecraft:icon": { "texture": "build" },
+      "minecraft:render_offsets": "tools",
+      "minecraft:hand_equipped": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 1,
+      "minecraft:food": {
+        "nutrition": 0,
+        "saturation_modifier": 0,
+        "can_always_eat": true,
+        "cooldown_time": 1
+      }
+    }
+  }
+}

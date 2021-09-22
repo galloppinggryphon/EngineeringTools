@@ -1,0 +1,5 @@
+.tmp
+.unotes
+.vscode
+node_modules
+todo.md

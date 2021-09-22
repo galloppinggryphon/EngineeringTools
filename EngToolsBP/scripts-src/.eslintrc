@@ -1,0 +1,98 @@
+{
+  "root": true,
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "server": true,
+    "client": true,
+    "system": true,
+    "SIMULATE_COMMANDS": true,
+    "DEBUG_LOG": true,
+    "SYSTEM_LOGGER": true,
+    "NAMESPACE": true,
+    "ADDON_SETTINGS": true,
+    "TOOL_LIST": true,
+    "getToolIdentifier": true,
+    "getToolName": true,
+    "player": true,
+    "debug": true,
+    "log": true,
+    "error": true,
+    "notice": true,
+    "chat": true,
+    "info": true,
+    "stringify": true,
+    "__noop": true
+  },
+  "rules": {
+    "array-bracket-spacing": ["warn", "always"],
+    "arrow-parens": ["warn", "always"],
+    "brace-style": ["warn", "stroustrup"],
+    "comma-dangle": ["warn", "always-multiline"],
+    "comma-spacing": ["warn", { "before": false, "after": true }],
+    "computed-property-spacing": ["warn", "always"],
+    "curly": ["warn", "all"],
+		"eqeqeq": ["error", "smart"],
+    "func-call-spacing": ["warn", "never"],
+    "indent": [
+      "warn",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "key-spacing": [
+      "warn",
+      {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "keyword-spacing": [
+      "warn",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "no-case-declarations": "off",
+    "no-console": "error",
+    "no-lonely-if": "warn",
+    "no-multi-spaces": "warn",
+    "no-multiple-empty-lines": ["warn", { "max": 1 }],
+    "no-shadow": "error",
+    "no-unreachable": "warn",
+    "no-unused-vars": "warn",
+    "no-trailing-spaces": "warn",
+    "object-curly-spacing": ["warn", "always"],
+    "prefer-template": "warn",
+    "quotes": ["warn", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "semi": ["warn", "never", { "beforeStatementContinuationChars": "always" }],
+    "semi-spacing": ["warn", { "before": false, "after": true }],
+    "spaced-comment": ["warn", "always"],
+    "space-in-parens": ["warn", "always"],
+    "space-infix-ops": ["warn"],
+    "space-unary-ops": [
+      "warn",
+      {
+        "words": true,
+        "nonwords": false,
+        "overrides": {
+          "!": true,
+          "!!": true
+        }
+      }
+    ],
+    "switch-colon-spacing": ["warn"],
+    "template-curly-spacing": ["warn", "always"],
+    "template-tag-spacing": ["warn", "always"]
+  }
+}

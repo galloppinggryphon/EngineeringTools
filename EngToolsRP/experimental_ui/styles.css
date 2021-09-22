@@ -1,0 +1,494 @@
+/* condensed, bold, small-caps */
+@font-face {
+  font-family: "Minecraft Ten";
+  src: url(fonts/MinecraftTen.otf);
+}
+/* condensed, normal, normal */
+@font-face {
+  font-family: "Minecraft Seven";
+  src: url(fonts/MinecraftSeven.otf);
+}
+/* wide, normal, small-caps */
+@font-face {
+  font-family: "Minecraft Five";
+  src: url(fonts/MinecraftFive.otf);
+}
+/* wide, bold, small-caps */
+@font-face {
+  font-family: "Minecraft Five Bold";
+  src: url(fonts/MinecraftFiveBold.otf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Minecraft Seven";
+  font-size: 24px;
+}
+
+div {
+  display: block;
+}
+
+p {
+  /* font-family: "Minecraft Seven"; */
+  margin: 0;
+  padding: 0;
+  /* font-size: 24px; */
+}
+
+/* Note: h1, h2, h3, etc CANNOT be styled - it just doesn't work */
+.h1 {
+  font-family: "Minecraft Ten";
+  font-size: 36px;
+}
+
+.h2 {
+  font-family: "Minecraft Ten";
+  font-size: 30px;
+}
+
+.h3 {
+  font-family: "Minecraft Ten";
+  font-size: 24px;
+}
+
+.text-emphasis {
+  font-family: "Minecraft Five Bold";
+  font-size: 22px;
+}
+
+.button {
+  display: inline-block;
+  color: #4c4c4c;
+  padding: 10px 20px;
+  border-width: 3px;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-family: "Minecraft Seven";
+  font-size: 26px;
+}
+
+.button:hover {
+  border: 3px solid #ffffff;
+  background-color: #143a72;
+  color: #ffffff;
+}
+
+.button-primary {
+  padding: 0 40px;
+  margin-right: 30px;
+  font-family: "Minecraft Ten";
+  font-size: 30px;
+  height: 80px;
+}
+.button-primary:hover {
+  border: 3px solid white;
+  background-color: #143a72;
+  color: #ffffff;
+}
+.button-secondary {
+  box-sizing: content-box;
+  height: 80px;
+}
+.button-danger:hover {
+  border: 3px solid #ffffff;
+  background-color: #962c2c;
+  color: #ffffff;
+}
+.button-tertiary {
+  font-size: 22px;
+  padding: 5px;
+}
+.button-save {
+  background-image: url(checkmark-32.png);
+  background-position: 20px;
+  background-repeat: no-repeat;
+  padding-left: 70px !important;
+}
+
+.icon-buttons {
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon-button {
+  height: 46px;
+  width: 46px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input {
+  font-family: "Minecraft Five";
+  font-size: 24px;
+}
+.input-text {
+  width: 100px;
+  padding: 10px 15px;
+}
+.input-text:focus {
+  background-color: goldenrod;
+}
+.input-number {
+  text-align: right;
+}
+
+.input-radio--buttons .input-radio-option {
+  padding: 10px;
+  font-family: "Minecraft Seven";
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 0 none;
+}
+
+.input-radio--buttons .input-radio-selected {
+  background: rgb(71, 71, 71);
+  color: white;
+}
+
+.input-radio--classic .input-radio-option {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  font-family: "Minecraft Seven";
+}
+.input-radio--classic .input-radio-option > * {
+  display: block;
+  float: left;
+}
+
+.input-radio--classic .input-radio-option .input-radio {
+  display: block;
+  position: relative;
+  border: 3px solid black;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.input-radio--classic .input-radio-selected .input-radio {
+  background-color: white;
+}
+.input-radio--classic .input-radio-selected .input-radio span {
+  display: block;
+  position: absolute;
+  top: 17%;
+  bottom: 17%;
+  left: 17%;
+  right: 17%;
+  background-color: black;
+}
+
+#screen-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#main-panel {
+  bottom: 2vh;
+  top: 2vh;
+  right: 2vh;
+  width: 450px;
+}
+
+#main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10%;
+  /* padding: 20px; */
+  text-align: center;
+  vertical-align: middle;
+}
+#main-header .h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 15px;
+  border-top: white solid 5px;
+  border-left: white solid 5px;
+  border-right: #838383 solid 5px;
+  border-bottom: #838383 solid 5px;
+  background-color: rgb(223, 223, 223);
+}
+
+#main-section {
+  position: absolute;
+  top: 10.5%;
+  left: 0;
+  right: 0;
+  bottom: 15.5%;
+  padding: 20px;
+  overflow: scroll;
+}
+
+#main-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15%;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#console-panel {
+  bottom: 2vh;
+  top: 2vh;
+  right: 500px;
+  width: 600px;
+}
+
+#console-wrapper {
+  padding: 5px;
+}
+
+#console-wrapper > * {
+  position: absolute;
+}
+
+#console-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 14%;
+  padding: 10px;
+}
+
+#console-main {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 86%;
+}
+
+#console-menu {
+  margin-top: 20px;
+}
+
+#console {
+  display: block;
+  flex: 1 0 100%;
+  /* height: 200px; */
+  /* min-width: 100%; */
+  /* flex: 1; */
+  /* height: 400px; */
+  width: 100%;
+  background-color: white;
+  font-family: sans-serif;
+  padding: 5px;
+}
+
+.screen-panel {
+  position: absolute;
+  background-color: rgba(210, 210, 210, 0.9);
+}
+
+.screen-panel > div {
+  position: absolute;
+  bottom: 15px;
+  top: 15px;
+  right: 15px;
+  left: 15px;
+}
+
+.box {
+  border: 3px solid rgb(71, 71, 71);
+}
+
+.stacked-panel {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.stacked-panel :first-child {
+  margin-top: 0 !important;
+}
+
+.stacked-panel .panel h2 {
+  margin: 20px 0 10px 0;
+}
+
+.info-panel {
+  padding: 10px;
+  background-color: white;
+}
+
+.notification {
+  margin-bottom: 10px;
+}
+.notification .button {
+  background-color: white;
+  border-color: white;
+}
+.notification .button:hover {
+  background-color: black;
+  color: white;
+}
+
+.notice {
+  padding: 10px;
+  background-color: white;
+}
+
+.info {
+  padding: 10px;
+  background-color: rgb(197, 224, 255);
+}
+.info .button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-color: black;
+}
+
+.warning {
+  padding: 10px;
+  background-color: rgba(218, 165, 32); /* c81919 */
+}
+
+.error {
+  padding: 10px;
+  background-color: #c8191998; /* c81919 */
+}
+
+.panel {
+  flex: 1;
+  margin-bottom: 10px;
+}
+.panel > * {
+  width: 100%;
+}
+
+.panel-row {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.centre-contents-horizontal {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+  height: 100%;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+}
+.centre-contents-horizontal > * {
+  flex: 0;
+}
+
+.fill-contents-vertical {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.fill-contents-vertical > * {
+  min-width: 100%;
+  flex: 1 0 100%;
+}
+.centre-contents-vertical {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+  align-items: center;
+}
+
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.columns > * {
+  margin-right: 10px;
+}
+
+/* No pseudo support */
+.columns > .last-child {
+  margin-right: 0 !important;
+}
+
+.weight-2 {
+  flex: 2;
+}
+.align-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.align-left > * {
+  flex: auto 1 0%;
+}
+.align-centred {
+  justify-content: center;
+  align-items: center;
+}
+.align-spread {
+  justify-content: space-between;
+}
+.align-spread > * {
+  flex: 0 1 auto;
+}
+.align-stretch {
+  justify-content: stretch;
+}
+.align-stretch > * {
+  flex: 1 1 0%;
+}
+.align-x-stretch {
+  align-items: stretch;
+}
+
+.menu-bar > * {
+  flex: 0 1 0%;
+  margin-right: 10px;
+}
+.menu-bar > :last-child {
+  margin-right: 0;
+}
+
+.key-value {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.active {
+  border: 3px solid #66ff66;
+}
+
+.hide {
+  display: none !important;
+}
+
+.red {
+  background-color: rgba(200, 25, 25, 190);
+}
+
+.green {
+  background-color: rgba(25, 200, 25, 190);
+}

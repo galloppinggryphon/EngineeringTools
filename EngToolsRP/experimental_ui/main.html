@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <script src="UIEngine.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="_body_">
+    <div id="screen-box" data-type="debugSave">
+      <div id="console-panel" class="hide screen-panel">
+        <div id="console-wrapper">
+          <div
+            id="console-header"
+            class="box"
+          >
+            <div class="h3">CONSOLE</div>
+            <div id="console-menu" class="columns align-lefxt" style="">
+              <button
+                id="console-reset"
+                class="button button-tertiary"
+                data-type="consoleMenu"
+              >
+                Reset
+              </button>
+              <button
+                id="console-get-state"
+                class="button button-tertiary"
+                data-type="consoleMenu"
+              >
+                State
+              </button>
+
+              <div class="centre-contents-vertical centre-contents-horizontal">Use wheel to scroll</div>
+            </div>
+          </div>
+          <div
+            id="console-main"
+            class="box"
+            class="fill-contents-vertical"
+          >
+            <!-- <div style="background: greenyellow">Test</div> -->
+
+            <textarea id="console" readonly></textarea>
+          </div>
+        </div>
+      </div>
+      <div id="main-panel" class="screen-panel">
+        <div>
+          <div id="main-header" class="box">
+            <div class="h1">Engineering Tools</div>
+          </div>
+          <div id="main-section" class="box">
+            <div class="stacked-panel">
+
+              <div class="panel info-panel">
+                  <div id="tool-name" class="text-emphasis">n/a</div>
+              </div>
+
+              <div class="notification hide warning" id="notification-box">
+                <!-- <p id="notification-title" class="h3"></p> -->
+                <div id="notification-msg"></div>
+                <button
+                  id="notification-button"
+                  class="button button-tertiary"
+                  data-type="hide"
+                  data-target="notification-box"
+                >
+                  Ok
+                </button>
+              </div>
+
+              <div class="fill-config panel-row text-emphasis hide">
+                <div class="h2">Fill size</div>
+                <div class="columns align-spread">
+                  <div class="key-value--stacked">
+                    Width
+                    <input
+                      class="input input-text input-number"
+                      type="text"
+                      data-type="number"
+                      data-tooltype="fill"
+                      data-prop="size"
+                      data-subprop="width"
+                      value=""
+                      maxlength="3"
+                    />
+                  </div>
+                  <div class="key-value--stacked">
+                    Height
+                    <input
+                      class="input input-text input-number"
+                      type="text"
+                      data-type="number"
+                      data-tooltype="fill"
+                      data-prop="size"
+                      data-subprop="height"
+                      value=""
+                      size="3"
+                      maxlength="3"
+                    />
+                  </div>
+                  <div class="key-value--stacked last-child">
+                    Depth
+                    <input
+                      class="input input-text input-number"
+                      type="text"
+                      data-type="number"
+                      data-tooltype="fill"
+                      data-prop="size"
+                      data-subprop="depth"
+                      value=""
+                      size="3"
+                      maxlength="3"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="fill-config panel-row text-emphasis hide">
+                <div class="h2">Direction</div>
+                <div class="columns align-stretch">
+                  <div
+                    class="input-radio-group input-radio--buttons"
+                    data-type="radio-group"
+                    data-prop="buildDirections"
+                    data-key="x"
+                  >
+                    X
+                    <div class="input-radio-group-wrapper">
+                      <button
+                        class="input-radio-option"
+                        data-type="radio"
+                        data-value="west"
+                      >
+                        Left
+                      </button>
+                      <button
+                        class="input-radio-option"
+                        data-type="radio"
+                        data-value="east"
+                      >
+                        Right
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="input-radio-group input-radio--buttons"
+                    data-type="radio-group"
+                    data-prop="buildDirections"
+                    data-key="y"
+                  >
+                    Y
+                    <div class="input-radio-group-wrapper">
+                      <button
+                        class="input-radio-option"
+                        data-type="radio"
+                        data-value="up"
+                      >
+                        Up
+                      </button>
+                      <button
+                        class="input-radio-option"
+                        data-type="radio"
+                        data-value="down"
+                      >
+                        Down
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="input-radio-group input-radio--buttons"
+                    data-type="radio-group"
+                    data-tool="build"
+                    data-prop="buildDirections"
+                    data-key="z"
+                  >
+                    Z
+                    <div class="input-radio-group-wrapper">
+                      <button
+                        class="input-radio-option"
+                        data-type="radio"
+                        data-value="north"
+                      >
+                        Forward
+                      </button>
+                      <button
+                        class="input-radio-option"
+                        data-type="radio"
+                        data-value="south"
+                        data-warning="Warning: Building backwards may get you stuck!"
+                      >
+                        Back
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="shared-config panel-row hide">
+                <div class="h2">Block selector</div>
+                <p>
+                  Configure how block selection works (relative to selected
+                  block face).
+                </p>
+                <div
+                  class="input-radio-group input-radio--classic"
+                  data-type="radio-group"
+                  data-prop="targetBlock"
+                >
+                  <div class="input-radio-group-wrapper">
+                    <div
+                      class="input-radio-option"
+                      data-type="radio"
+                      data-value="posterior"
+                    >
+                      <button class="input-radio"><span></span></button>
+                      <span>Select block (behind)</span>
+                    </div>
+                    <div
+                      class="input-radio-option"
+                      data-type="radio"
+                      data-value="anterior"
+                      data-selected="false"
+                    >
+                      <div class="input-radio"><span></span></div>
+                      <span>Select air/liquid (in front)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="main-footer" class="box">
+            <div class="centre-contents-vertical centre-contents-horizontal">
+              <button
+                id="save-form"
+                class="button button-primary"
+                data-type="save"
+              >
+                Close
+              </button>
+              <button
+                id="reset-form"
+                class="button button-secondary button-danger"
+                data-type="reset"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

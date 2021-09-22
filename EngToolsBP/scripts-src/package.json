@@ -1,0 +1,10 @@
+{
+  "name": "build-bedrock-scripts",
+  "version": "0.0.1",
+  "description": "Simple script concatenator for Bedrock scripts.",
+  "scripts": {
+    "start": "node build-scripts/build.js"
+  },
+  "author": "Bjornar Egede-Nissen",
+  "license": "MIT"
+}
