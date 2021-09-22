@@ -14,7 +14,7 @@ Building anything big in Minecraft can be a chore! The Java edition has long had
 * 🟥 Quickly create large rectangular shapes from almost any block in any state
 * 🟧 Easily create walls, buildings, towers, tunnels, mountains, caves and holes in the ground
 * 🟩 Includes two building tools for creating or removing, and support tools for querying and measuring
-* 🟨 Create filled~~or hollow~~shapes (#todo: hollow shapes)
+* 🟨 Create filled shapes (#todo: hollow shapes)
 * 🟦 Includes easily accessible GUI to configure tool settings: use shift key (the 'sneak' key!) to open
 * 🟫 Uses the fill command behind the scenes
 * ⬜ Bonus tool: Teleport quickly within line-of-sight with a single click
@@ -67,7 +67,7 @@ What you need:
 
 ## Getting Started
 
-**Engineering Tools consts of two parts:**
+**Engineering Tools consists of two parts:**
 
 1. `Behaviour Pack`: Contains items and scripting logic.
 2. `Resource Pack`: Contains GUI and textures/icons
@@ -291,14 +291,13 @@ Engineering Tools, in whole or in part, must be redistributed under the GPL-v3 l
 Some parts of the software, as indicated in the source code or listed below, is licensed under different terms.
 <br>
 #### Blocks, items, models and build-scripts sub-folders
-<br>
-Any files in the `items`, `blocks`, `models` and `build-scripts` sub-folders, if present, may be distributed on their own under the MIT license.
-Copyright © Bjornar Egede-Nissen, 2021.
-License details: [https://choosealicense.com/licenses/mit/](https://choosealicense.com/licenses/mit/)
 
-<br>
+Any files in the `items`, `blocks`, `models` and `build-scripts` sub-folders, if present, may be distributed on their own under the MIT license ([https://choosealicense.com/licenses/mit/](https://choosealicense.com/licenses/mit/)).
+
+Copyright © Bjornar Egede-Nissen, 2021.
+
 #### Third party code
-<br>
+
 ##### Mojang
 
 The `experimental_ui` folder includes font files and UI engine code distributed by Mojang © in a demonstration addon package.
